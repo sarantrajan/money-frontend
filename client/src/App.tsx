@@ -6,6 +6,7 @@ import Accounts from './pages/Accounts';
 import Transactions from './pages/Transactions';
 import Savings from './pages/Savings';
 import Categories from './pages/Categories';
+import Analysis from './pages/Analysis';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Dashboard />} />
+              <Route path="/analysis" element={<Analysis />} />
             <Route path="/accounts" element={<Accounts />} />
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/savings" element={<Savings />} />

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import TransactionList from '../components/TransactionList';
 import TransactionForm from '../components/TransactionForm';

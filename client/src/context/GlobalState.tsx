@@ -1,4 +1,5 @@
-import React, { createContext, useReducer, ReactNode } from 'react';
+import { createContext, useReducer } from 'react';
+import type { ReactNode } from 'react';
 import api from '../services/api';
 
 // Types

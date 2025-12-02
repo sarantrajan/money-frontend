@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useContext } from 'react';
+import { useCallback, useEffect, useState, useContext } from 'react';
 import { usePlaidLink } from 'react-plaid-link';
 import { GlobalContext } from '../context/GlobalState';
 import api from '../services/api';

@@ -9,6 +9,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
     const navItems = [
         { name: 'Dashboard', path: '/', icon: LayoutDashboard },
+        { name: 'Analysis', path: '/analysis', icon: LayoutDashboard },
         { name: 'Accounts', path: '/accounts', icon: Wallet },
         { name: 'Transactions', path: '/transactions', icon: Receipt },
         { name: 'Savings', path: '/savings', icon: PiggyBank },

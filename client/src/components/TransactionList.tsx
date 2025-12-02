@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { format } from 'date-fns';
 import { ArrowUpRight, ArrowDownLeft, Trash2, Edit2 } from 'lucide-react';

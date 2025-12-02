@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import SummaryCards from '../components/SummaryCards';
 import TransactionList from '../components/TransactionList';
