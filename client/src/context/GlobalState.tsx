@@ -79,7 +79,9 @@ const AppReducer = (state: State, action: Action): State => {
         case 'EDIT_TRANSACTION':
             return {
                 ...state,
-                transactions: state.transactions.map(t => t._id === action.payload._id ? action.payload : t)
+                transactions: state.transactions.map(t =>
+                    t._id === action.payload._id ? action.payload : t
+                )
             };
         case 'DELETE_TRANSACTION':
             return {
@@ -93,7 +95,9 @@ const AppReducer = (state: State, action: Action): State => {
         case 'EDIT_ACCOUNT':
             return {
                 ...state,
-                accounts: state.accounts.map(a => a._id === action.payload._id ? action.payload : a)
+                accounts: state.accounts.map(a =>
+                    a._id === action.payload._id ? action.payload : a
+                )
             };
         case 'DELETE_ACCOUNT':
             return {
@@ -107,7 +111,9 @@ const AppReducer = (state: State, action: Action): State => {
         case 'EDIT_SAVING':
             return {
                 ...state,
-                savings: state.savings.map(s => s._id === action.payload._id ? action.payload : s)
+                savings: state.savings.map(s =>
+                    s._id === action.payload._id ? action.payload : s
+                )
             };
         case 'DELETE_SAVING':
             return {
@@ -272,9 +278,8 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
     async function addCategory(category: any) {
         try {
-            const res = await api.post('/categories', category);
-            // We can dispatch a new action or just reload categories
-            getCategories();
+            await api.post('/categories', category);
+            getCategories(); // Refresh list
         } catch (err: any) {
             dispatch({ type: 'TRANSACTION_ERROR', payload: err.response?.data?.error || 'Error' });
         }
@@ -304,7 +309,6 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
                 getSavings,
                 addSaving,
                 editSaving,
-                deleteSaving,
                 deleteSaving,
                 getCategories,
                 addCategory,
