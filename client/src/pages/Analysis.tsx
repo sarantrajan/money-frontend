@@ -21,13 +21,13 @@ type Transaction = {
   date: string;
 };
 
-const groupBy = (arr: Transaction[], keyFn: (t: Transaction) => string) => {
-  return arr.reduce<Record<string, number>>((acc, t) => {
-    const k = keyFn(t);
-    acc[k] = (acc[k] || 0) + Number(t.amount) * (t.type === 'income' ? 1 : -1);
-    return acc;
-  }, {});
-};
+// const groupBy = (arr: Transaction[], keyFn: (t: Transaction) => string) => {
+//   return arr.reduce<Record<string, number>>((acc, t) => {
+//     const k = keyFn(t);
+//     acc[k] = (acc[k] || 0) + Number(t.amount) * (t.type === 'income' ? 1 : -1);
+//     return acc;
+//   }, {});
+// };
 
 const sumByType = (arr: Transaction[], type: 'income' | 'expense') =>
   arr.filter((t) => t.type === type).reduce((s, t) => s + Number(t.amount), 0);
