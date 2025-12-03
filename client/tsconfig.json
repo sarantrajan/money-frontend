@@ -6,6 +6,7 @@
   ],
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "ES6"
+    "target": "ES6",
+    "noUnusedLocals": false
   }
 }

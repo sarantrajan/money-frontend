@@ -62,7 +62,7 @@ const Analysis: React.FC = () => {
     return d;
   });
 
-  const dailyGroups = groupBy(transactions, (t) => new Date(t.date).toLocaleDateString());
+  // const dailyGroups = groupBy(transactions, (t) => new Date(t.date).toLocaleDateString());
   const dailyLabels = last7.map((d) => d.toLocaleDateString());
   const dailyData = dailyLabels.map((l) => {
     // sum incomes as positive, expenses as negative
