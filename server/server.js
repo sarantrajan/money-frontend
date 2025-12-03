@@ -25,3 +25,9 @@ app.use('/api/plaid', require('./routes/plaid'));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.get("/", (req, res) => {
+    res.send("Money Manager API is running");
+});
+
+module.exports = app;
